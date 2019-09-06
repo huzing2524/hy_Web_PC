@@ -1,0 +1,160 @@
+
+//定位全屏
+allcover()
+  position absolute
+  top 0
+  right 0
+
+
+//transform上下左右居中
+ct()
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
+
+//定位上下左右居中
+ctp(width, height)
+  position absolute
+  top 50%
+  left 50%
+  margin-top -height/2
+  margin-left -width/2
+
+
+//flex上下左右剧中
+fct()
+  display flex
+  justify-content center
+  align-items center
+
+
+//定位上下居中
+tb()
+  position absolute
+  top 50%
+  transform translateY(-50%)
+
+
+//flex上下剧中
+ftb()
+  display flex
+  align-items center
+
+
+//定位左右居中
+lr()
+  position absolute
+  left 50%
+  transform translateX(-50%)
+
+//flex左右剧中
+flr()
+  display flex
+  justify-content center
+
+//content_box
+fbox()
+  flex 1
+  overflow-y scroll
+  -webkit-overflow-scrolling touch
+
+//宽高
+wh(width, height = auto)
+  width width
+  height height
+
+//字体大小、行高、字体
+ft(size, line-height)
+  font-size size
+  line-height line-height
+
+//字体大小，颜色
+fsc(size, color)
+  font-size size
+  color color
+
+// 背景颜色
+bg(color)
+  background color
+
+//flex 布局和 子元素 对其方式
+fj(type = space-between)
+  display flex
+  justify-content type
+
+//2倍图、3倍图，默认2倍图
+bg-image(url)
+  background-image url("./images/"+ url + "@2x.png")
+
+  @media only screen and (-webkit-min-device-pixel-ratio 2),
+  only screen and (min-device-pixel-ratio 2)
+    background-image url("./images/"+ url + "@3x.png")
+
+
+//多行超出省略号
+ellipsis(line = 2, line-height = 1.2)
+  overflow hidden
+  text-overflow ellipsis
+  display -webkit-box
+  -webkit-box-orient vertical
+  -webkit-line-clamp line
+  line-height line-height
+
+modalbg(color-bg = rgba(0, 0, 0, 0.2))
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background-color color-bg
+
+clear()
+  &after
+    content '.'
+    clear both
+    display block
+    width 0
+    height 0
+    visibility hidden
+
+bgf()
+  background #FFF
+mgauto()
+  margin-left auto
+  margin-right auto
+
+shadow()
+  box-shadow 0px 0px 10px 0px rgba(35,121,191,0.2)
+  border-radius 8px
+
+bordertitle(size = 15px)
+  color #545454
+  font-size size
+  font-weight 600px
+
+title(size = 14px)
+  color #545454
+  font-size size
+
+subtitle()
+  font-size 14px
+  color #a7a7a7
+
+minititle()
+  font-size 12px
+  color #999999
+
+single-text()
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+
+// 实心蓝色背景按钮样式
+header-button(marginLeft=20px)
+  width 108px
+  height 34px
+  background-color #1E9AFF
+  color #fff
+  margin-left marginLeft
