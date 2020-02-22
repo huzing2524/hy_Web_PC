@@ -27,12 +27,8 @@ module.exports = {
     host: '0.0.0.0',
     port: 8080,
     https: false,
-    // proxy: 'http://10.10.10.30:8000'
-    // proxy: 'http://192.168.2.8:8000'
     // proxy: 'https://whby.tenv.dsdiot.com'
-    // proxy: 'https://yapi.tenv.dsdiot.com/mock/23'
-    proxy: 'http://10.10.10.32:8080'
-    // proxy: 'http://10.10.10.10:8080'
+    proxy: 'http://127.0.0.1:8000'
   },
   css: {
     loaderOptions: {
