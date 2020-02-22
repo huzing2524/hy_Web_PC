@@ -14,8 +14,7 @@ Axios.defaults.headers['Authorization'] =
 //     ? 'http://10.10.10.30:8000'
 //     : window.location.origin
 // export const rootUrl = process.env.NODE_ENV == 'development' ? 'https://yapi.tenv.dsdiot.com/mock/23/api/v1/' : window.location.origin + '/api/v1/'
-// export const rootUrl = window.location.origin + '/api/v1/'
-export const rootUrl = window.location.origin
+export const rootUrl = window.location.origin + '/api/v1/'
 
 Axios.defaults.baseURL = rootUrl
 
